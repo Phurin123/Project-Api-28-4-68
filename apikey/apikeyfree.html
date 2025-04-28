@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate API Key</title>
+    <link rel="stylesheet" href="apikeyfree.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Plan Free</h1>
+        <h2>Select Detection Options</h2>
+        <div class="options">
+            <label>
+                <input type="checkbox" value="porn" class="analysis-option">
+                <i class="fas fa-user-secret"></i> Nudity
+            </label>
+            <label>
+                <input type="checkbox" value="cigarette" class="analysis-option">
+                <i class="fas fa-smoking"></i> Smoking
+            </label>
+            <label>
+                <input type="checkbox" value="weapon" class="analysis-option">
+                <i class="fas fa-gun"></i> Weapon
+            </label>
+            <label>
+                <input type="checkbox" value="violence" class="analysis-option">
+                <i class="fas fa-fist-raised"></i> Violence
+            </label>
+        </div>
+
+        <h3>Image Upload Limit</h3>
+        <input type="number" id="quota" value="100" readonly>
+
+        <button class="view-btn" onclick="generateApiKey()">Generate Key</button>
+        <button class="view-btn" onclick="window.location.href='view-api-keys.html'">View API Keys</button>
+
+        <h3>Generated API Key</h3>
+        <p id="apiKey">---</p>
+    </div>
+
+    <script src="apikeyfree.js"></script>
+</body>
+</html>

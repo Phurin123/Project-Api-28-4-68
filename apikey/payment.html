@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="payment.css">
+  <script src="https://cdn.omise.co/omise.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Payment Required</h1>
+    <p>Amount to pay: <span id="amount"></span> Baht</p>
+    <p>Please scan the QR code below to complete the payment.</p>
+    <img id="qrCodeImage" src="" alt="QR Code" style="width:300px;height:auto;">
+
+    <p><strong>Ref Code:</strong> <span id="refCodeDisplay" style="font-family:monospace; color:#333;"></span></p>
+    <button onclick="copyRefCode()">คัดลอก Ref Code</button>
+
+    <p style="color: red; font-weight: bold; margin-top: 10px;">
+      * กรุณาใส่ Ref Code นี้ในช่อง "หมายเหตุ" ขณะทำการโอนเงินผ่านแอปธนาคาร
+    </p>
+    <p style="color: red; font-weight: bold;">
+      * หากไม่ใส่ Ref Code ระบบจะไม่สามารถตรวจสอบการชำระเงินของคุณได้!
+    </p>
+
+    <p id="paymentStatus">Waiting for payment...</p>
+    <button onclick="window.location.href='../receipt/receipt.html'">ฉันได้ชำระเงินแล้ว</button>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>

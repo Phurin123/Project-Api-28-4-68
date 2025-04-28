@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API Key Dashboard</title>
+  <style>
+    /* พื้นหลังและตัวอักษร */
+    body.api-body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* กล่องหลัก */
+    .api-container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .api-container h1 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    /* ปุ่ม */
+    .api-button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .api-btn-right {
+      display: inline-block;
+      background-color: #4e73df;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .api-btn-right:hover {
+      background-color: #2e59d9;
+      transform: translateY(-2px);
+    }
+
+    /* อนิเมชันนุ่ม ๆ */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive layout สำหรับจอใหญ่ขึ้น */
+    @media (min-width: 500px) {
+      .api-button-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .api-btn-right {
+        flex: 1;
+        margin: 0 10px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body class="api-body">
+  <div class="api-container">
+    <h1>🎯 จัดการ API Key ของคุณ</h1>
+    <div class="api-button-group">
+      <a href="../plan/plan.html" class="api-btn-right">Create API-Key</a>
+      <a href="../apikey/view-api-keys.html" class="api-btn-right">MY API-Key</a>
+    </div>
+  </div>
+</body>
+</html>
